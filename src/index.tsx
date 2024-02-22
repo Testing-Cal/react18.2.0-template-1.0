@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Home from './home';
 import './style.css';
@@ -25,8 +25,6 @@ class App extends React.Component<AppProp,AppState> {
 
   render() {
     const basePath = process.env.REACT_APP_CONTEXT;
-    console.log('pathname',window.location)
-    console.log('basePath',basePath)
       return (
           <Router basename={basePath}>
               <div>
@@ -55,4 +53,10 @@ class App extends React.Component<AppProp,AppState> {
   }
 }
 
-render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(<App />);
+} else {
+  console.error("Root element not found.");
+}
