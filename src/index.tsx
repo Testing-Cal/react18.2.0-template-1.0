@@ -13,7 +13,7 @@ const App = () => {
     <Router basename={basePath}>
       <div>
           <nav style={{margin: '20px'}}>
-              <Link to="/" style={{marginRight: '20px'}}>Home1</Link>
+              <Link to="/" style={{marginRight: '20px'}}>Home</Link>
               <Link to="/dashboard" style={{marginRight: '20px'}}>Dashboard</Link>
               <Link to="/listing">Listing</Link>
           </nav>
