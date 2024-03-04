@@ -27,7 +27,7 @@ color:'gray',
 data: [3,3,3.5,3.5,3.75,4]
 }]
 
-function Home(props:HomeProp) {
+function Home() {
   const [title,setTitle] = useState('Engagement dashboard')
   return (
     <div className="App">
