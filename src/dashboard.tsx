@@ -5,7 +5,7 @@ function Dashboard(){
         <div>
         <h2>This is Dashboard</h2>
         <nav style={{margin: '20px'}}>
-        <Link to="/dashboard/nested">New</Link>
+        <Link to="/dashboard/nested">Nested</Link>
         </nav>
         <Outlet />
         </div>
