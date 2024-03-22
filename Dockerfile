@@ -18,8 +18,6 @@ RUN export VCONTEXT=$(echo ${CONTEXT} | sed "s|/||g") && sed -i "s|"CONTEXT"|"${
 # Build the project and copy the files
 RUN npm run build
 
-RUN cat package.json
-
 
 
 FROM node:16.13.2

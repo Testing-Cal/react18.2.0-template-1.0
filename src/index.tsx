@@ -2,13 +2,12 @@ import * as React from 'react'
 import { createRoot } from 'react-dom/client';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './home';
 import { Outlet } from "react-router-dom";
 import './style.css';
 import Dashboard  from "./dashboard";
 import Listing from "./listing";
-import Posts from "./new";
+import Nested from "./nested";
 import PageNotFound from './page-not-found'
 console.log("Inside index.tsx")
 
@@ -21,8 +20,8 @@ const App = () => {
           <nav style={{margin: '20px'}}>
               <Link to="/" style={{marginRight: '20px'}}>Home</Link>
               <Link to="/dashboard" style={{marginRight: '20px'}}>Dashboard</Link>
-              <Link to="/listing">Listing</Link>
-              <Link to="/dashboard/listing">Listing 1</Link>
+              <Link to="/listing" style={{marginRight: '20px'}}>Listing</Link>
+              <Link to="/dashboard/listing">About</Link>
 
           </nav>
 
@@ -30,7 +29,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/dashboard/*" element={<Dashboard />} >
                     <Route index element={<Home />} />
-                    <Route path='new' element={<Posts />} /> {/*A nested route!*/}
+                    <Route path='nested' element={<Nested />} /> {/*A nested route!*/}
                     <Route path='listing' element={<Listing />} /> {/*A nested route!*/}
               </Route>
               <Route path="/listing" element={<Listing />} />
