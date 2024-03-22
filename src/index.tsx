@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Home from './home';
 import './style.css';
