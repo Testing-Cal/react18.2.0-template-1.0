@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect"; // for additional matchers
+import "@testing-library/jest-dom";
 import Listing from "../listing";
 
 // Mocking modules that are not relevant to the actual test
