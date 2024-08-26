@@ -1,15 +1,14 @@
 import React from "react";
-import Enzyme from "enzyme";
-import { shallow } from "enzyme";
-import Adapter from "@cfaester/enzyme-adapter-react-18";
-import "jest-enzyme";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import Home from "../home";
 
+// Mocking modules that are not relevant to the actual test
 jest.mock("highcharts/highcharts-3d");
 
-Enzyme.configure({ adapter: new Adapter() });
 describe("<Home />", () => {
   it("renders <Home /> component in root", () => {
-    shallow(<Home />);
+    // Render the component
+    render(<Home />);
   });
 });
