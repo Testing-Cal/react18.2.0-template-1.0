@@ -6,8 +6,6 @@ import './style.css';
 import Dashboard  from "./dashboard";
 import Listing from "./listing";
 import PageNotFound from './page-not-found'
-console.log("Inside index.tsx")
-
 
 const App = () => {
   const basePath = process.env.REACT_APP_CONTEXT;
