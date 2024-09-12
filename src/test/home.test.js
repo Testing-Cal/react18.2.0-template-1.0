@@ -3,9 +3,6 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Home from "../home";
 
-// Mocking modules that are not relevant to the actual test
-jest.mock("highcharts/highcharts-3d");
-
 describe("<Home />", () => {
   it("renders <Home /> component in root", () => {
     // Render the component
