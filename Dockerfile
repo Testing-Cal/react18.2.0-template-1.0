@@ -1,5 +1,5 @@
 # stage1 as builder
-FROM node:20.11.1 as builder
+FROM node:20.11.1-slim as builder
 ARG CONTEXT='/'
 # copy the package.json to install dependencies
 COPY package.json ./
@@ -20,7 +20,7 @@ RUN npm run build
 
 
 
-FROM node:20.11.1
+FROM node:20.11.1-slim
 ARG CONTEXT='/'
 #ENV context "/"
 
